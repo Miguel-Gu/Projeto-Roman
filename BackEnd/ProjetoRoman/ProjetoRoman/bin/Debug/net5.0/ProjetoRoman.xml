@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ProjetoRoman</name>
+    </assembly>
+    <members>
+        <member name="T:ProjetoRoman.Controllers.EquipesController">
+            <summary>
+            Controller responsável pelos endpoints (URLs) referentes as equipes
+            </summary>
+        </member>
+        <member name="M:ProjetoRoman.Controllers.EquipesController.Get">
+            <summary>
+            Lista todas as equipes
+            </summary>
+            <returns>Uma lista de equipes</returns>
+        </member>
+        <member name="T:ProjetoRoman.Controllers.LoginController">
+            <summary>
+            Controller responsável pelos endpoints referentes ao Login
+            </summary>
+        </member>
+        <member name="M:ProjetoRoman.Controllers.LoginController.Login(ProjetoRoman.ViewModels.LoginViewModel)">
+            <summary>
+            Valida o usuário
+            </summary>
+            <param name="login">Objeto login com o e-mail e a senha do usuário</param>
+            <returns>Um status code 200 - Ok com o token do usuário autenticado</returns>
+        </member>
+        <member name="T:ProjetoRoman.Controllers.ProfessoresController">
+            <summary>
+            Controller responsável pelos endpoints (URLs) referente aos eventos
+            </summary>
+        </member>
+        <member name="M:ProjetoRoman.Controllers.ProfessoresController.Get">
+            <summary>
+            Lista todos os professores
+            </summary>
+            <returns>Uma lista de professores</returns>
+        </member>
+        <member name="T:ProjetoRoman.Controllers.ProjetosController">
+            <summary>
+            Controller responsável pelos endpoints (URLs) referente aos projetos
+            </summary>
+        </member>
+        <member name="M:ProjetoRoman.Controllers.ProjetosController.Get">
+            <summary>
+            Lista todos os projetos
+            </summary>
+            <returns>Uma lista de projetos</returns>
+        </member>
+        <member name="M:ProjetoRoman.Controllers.ProjetosController.Post(ProjetoRoman.Domains.Projeto)">
+            <summary>
+            Cadastra um novo projeto
+            </summary>
+            <param name="novoProjeto">Objeto novoProjeto que será cadastrado</param>
+        </member>
+        <member name="M:ProjetoRoman.Controllers.TemasController.Get">
+            <summary>
+            Lista todos os temas
+            </summary>
+            <returns>Uma lista de temas</returns>
+        </member>
+        <member name="T:ProjetoRoman.Controllers.TiposUsuariosController">
+            <summary>
+            Controller responsável pelos endpoints (URLs) referentes aos tipos de usuários
+            </summary>
+        </member>
+        <member name="M:ProjetoRoman.Controllers.TiposUsuariosController.Get">
+            <summary>
+            Lista todos os tipos de usuários
+            </summary>
+            <returns>Uma lista de tipos de usuários</returns>
+        </member>
+        <member name="T:ProjetoRoman.Controllers.UsuariosController">
+            <summary>
+            Controller responsável pelos endpoints (URLs) referentes aos eventos
+            </summary>
+        </member>
+        <member name="M:ProjetoRoman.Controllers.UsuariosController.Get">
+            <summary>
+            Lista todos os usuários
+            </summary>
+            <returns>Uma lista de usuários</returns>
+        </member>
+        <member name="T:ProjetoRoman.Interfaces.IEquipeRepository">
+            <summary>
+            Interface responsável pelo EquipeRepository
+            </summary>
+        </member>
+        <member name="M:ProjetoRoman.Interfaces.IEquipeRepository.Listar">
+            <summary>
+            Lista todas as equipes
+            </summary>
+            <returns>Uma lista de equipes</returns>
+        </member>
+        <member name="T:ProjetoRoman.Interfaces.IProfessorRepository">
+            <summary>
+            Interface responsável pelo ProfessorRepository
+            </summary>
+        </member>
+        <member name="M:ProjetoRoman.Interfaces.IProfessorRepository.Listar">
+            <summary>
+            Lista todos os professores
+            </summary>
+            <returns>Uma lista de professores</returns>
+        </member>
+        <member name="T:ProjetoRoman.Interfaces.IProjetoRepository">
+            <summary>
+            Interface responsável pelo ProjetoRepository
+            </summary>
+        </member>
+        <member name="M:ProjetoRoman.Interfaces.IProjetoRepository.Listar">
+            <summary>
+            Lista todos os projetos
+            </summary>
+            <returns>Uma lista de projetos</returns>
+        </member>
+        <member name="M:ProjetoRoman.Interfaces.IProjetoRepository.Cadastrar(ProjetoRoman.Domains.Projeto)">
+            <summary>
+            Cadastra um novo projeto
+            </summary>
+            <param name="novoProjeto">Objeto novoProjeto que será cadastrado</param>
+        </member>
+        <member name="T:ProjetoRoman.Interfaces.ITemaRepository">
+            <summary>
+            Interface responsável pelo TemaRepository
+            </summary>
+        </member>
+        <member name="M:ProjetoRoman.Interfaces.ITemaRepository.Listar">
+            <summary>
+            Lista todos os temas
+            </summary>
+            <returns>Uma lista de temas</returns>
+        </member>
+        <member name="T:ProjetoRoman.Interfaces.ITipoUsuarioRepository">
+            <summary>
+            Interface responsável pelo TipoUsuarioRepository
+            </summary>
+        </member>
+        <member name="M:ProjetoRoman.Interfaces.ITipoUsuarioRepository.Listar">
+            <summary>
+            Lista todos os tipos de usuários
+            </summary>
+            <returns>Uma lista de tipos de usuários</returns>
+        </member>
+        <member name="T:ProjetoRoman.Interfaces.IUsuarioRepository">
+            <summary>
+            Interface responsável pelo UsuarioRepository
+            </summary>
+        </member>
+        <member name="M:ProjetoRoman.Interfaces.IUsuarioRepository.Login(System.String,System.String)">
+            <summary>
+            Valida o usuário
+            </summary>
+            <param name="email"></param>
+            <param name="senha"></param>
+            <returns>Um objeto do tipo Usuario que foi encontrado</returns>
+        </member>
+        <member name="M:ProjetoRoman.Interfaces.IUsuarioRepository.Listar">
+            <summary>
+            Lista todos os usuários
+            </summary>
+            <returns>Uma lista de usuários</returns>
+        </member>
+        <member name="T:ProjetoRoman.ViewModels.LoginViewModel">
+            <summary>
+            Classe responsável pleo modelo de Login
+            </summary>
+        </member>
+    </members>
+</doc>
