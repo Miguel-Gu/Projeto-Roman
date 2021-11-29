@@ -10,24 +10,39 @@
 			"item": [
 				{
 					"name": "Equipe.ListarTodos",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
 					"request": {
 						"auth": {
 							"type": "bearer",
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imd1c3Rhdm9AZW1haWwuY29tIiwianRpIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjIiLCJyb2xlIjoiMiIsIm5hbWUiOiJndXN0YXZvIiwiZXhwIjoxNjM3OTU1ODExLCJpc3MiOiJyb21hbi53ZWJBUEkiLCJhdWQiOiJyb21hbi53ZWJBUEkifQ.ppKofz25iy28aFCYI3K80-wl3vngVf8nUlf_-uIWcLM",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imd1c3Rhdm9AZW1haWwuY29tIiwianRpIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjIiLCJyb2xlIjoiMiIsIm5hbWUiOiJndXN0YXZvIiwiZXhwIjoxNjM4MjA4MzczLCJpc3MiOiJyb21hbi53ZWJBUEkiLCJhdWQiOiJyb21hbi53ZWJBUEkifQ.ogQ_uZ5lRRVfUstroxHNSaRtjWIXalTM5jkWO8bkuYE",
 									"type": "string"
 								}
 							]
 						},
 						"method": "GET",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": "http://localhost:5000/api/Equipes",
+							"raw": "http://192.168.3.124:5000/api/Equipes",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"192",
+								"168",
+								"3",
+								"124"
 							],
 							"port": "5000",
 							"path": [
@@ -58,10 +73,13 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5000/api/Login",
+							"raw": "http://192.168.3.124:5000/api/Login",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"192",
+								"168",
+								"3",
+								"124"
 							],
 							"port": "5000",
 							"path": [
@@ -85,7 +103,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imd1c3Rhdm9AZW1haWwuY29tIiwianRpIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjIiLCJyb2xlIjoiMiIsIm5hbWUiOiJndXN0YXZvIiwiZXhwIjoxNjM3OTU1ODExLCJpc3MiOiJyb21hbi53ZWJBUEkiLCJhdWQiOiJyb21hbi53ZWJBUEkifQ.ppKofz25iy28aFCYI3K80-wl3vngVf8nUlf_-uIWcLM",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imd1c3Rhdm9AZW1haWwuY29tIiwianRpIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjIiLCJyb2xlIjoiMiIsIm5hbWUiOiJndXN0YXZvIiwiZXhwIjoxNjM4MjA4MzczLCJpc3MiOiJyb21hbi53ZWJBUEkiLCJhdWQiOiJyb21hbi53ZWJBUEkifQ.ogQ_uZ5lRRVfUstroxHNSaRtjWIXalTM5jkWO8bkuYE",
 									"type": "string"
 								}
 							]
@@ -93,10 +111,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/Professores",
+							"raw": "http://192.168.3.124:5000/api/Professores",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"192",
+								"168",
+								"3",
+								"124"
 							],
 							"port": "5000",
 							"path": [
@@ -120,7 +141,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imd1c3Rhdm9AZW1haWwuY29tIiwianRpIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjIiLCJyb2xlIjoiMiIsIm5hbWUiOiJndXN0YXZvIiwiZXhwIjoxNjM3OTU1ODExLCJpc3MiOiJyb21hbi53ZWJBUEkiLCJhdWQiOiJyb21hbi53ZWJBUEkifQ.ppKofz25iy28aFCYI3K80-wl3vngVf8nUlf_-uIWcLM",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imd1c3Rhdm9AZW1haWwuY29tIiwianRpIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjIiLCJyb2xlIjoiMiIsIm5hbWUiOiJndXN0YXZvIiwiZXhwIjoxNjM4MjA4MzczLCJpc3MiOiJyb21hbi53ZWJBUEkiLCJhdWQiOiJyb21hbi53ZWJBUEkifQ.ogQ_uZ5lRRVfUstroxHNSaRtjWIXalTM5jkWO8bkuYE",
 									"type": "string"
 								}
 							]
@@ -128,10 +149,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/Projetos",
+							"raw": "http://192.168.3.124:5000/api/Projetos",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"192",
+								"168",
+								"3",
+								"124"
 							],
 							"port": "5000",
 							"path": [
@@ -150,7 +174,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imd1c3Rhdm9AZW1haWwuY29tIiwianRpIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjIiLCJyb2xlIjoiMiIsIm5hbWUiOiJndXN0YXZvIiwiZXhwIjoxNjM3OTU1ODExLCJpc3MiOiJyb21hbi53ZWJBUEkiLCJhdWQiOiJyb21hbi53ZWJBUEkifQ.ppKofz25iy28aFCYI3K80-wl3vngVf8nUlf_-uIWcLM",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imd1c3Rhdm9AZW1haWwuY29tIiwianRpIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjIiLCJyb2xlIjoiMiIsIm5hbWUiOiJndXN0YXZvIiwiZXhwIjoxNjM4MjA4MzczLCJpc3MiOiJyb21hbi53ZWJBUEkiLCJhdWQiOiJyb21hbi53ZWJBUEkifQ.ogQ_uZ5lRRVfUstroxHNSaRtjWIXalTM5jkWO8bkuYE",
 									"type": "string"
 								}
 							]
@@ -159,7 +183,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"Idtema\": 2,\r\n    \"IdProfessor\": 2,\r\n    \"NomeProjeto\": \"Segundo Projeto de Teste\"\r\n}",
+							"raw": "{\r\n    \"Idtema\": 2,\r\n    \"IdProfessor\": 2,\r\n    \"NomeProjeto\": \"Terceiro Projeto de Teste\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -167,10 +191,13 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:5000/api/Projetos",
+							"raw": "http://192.168.3.124:5000/api/Projetos",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"192",
+								"168",
+								"3",
+								"124"
 							],
 							"port": "5000",
 							"path": [
@@ -194,7 +221,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imd1c3Rhdm9AZW1haWwuY29tIiwianRpIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjIiLCJyb2xlIjoiMiIsIm5hbWUiOiJndXN0YXZvIiwiZXhwIjoxNjM3OTU1ODExLCJpc3MiOiJyb21hbi53ZWJBUEkiLCJhdWQiOiJyb21hbi53ZWJBUEkifQ.ppKofz25iy28aFCYI3K80-wl3vngVf8nUlf_-uIWcLM",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imd1c3Rhdm9AZW1haWwuY29tIiwianRpIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjIiLCJyb2xlIjoiMiIsIm5hbWUiOiJndXN0YXZvIiwiZXhwIjoxNjM4MjA4MzczLCJpc3MiOiJyb21hbi53ZWJBUEkiLCJhdWQiOiJyb21hbi53ZWJBUEkifQ.ogQ_uZ5lRRVfUstroxHNSaRtjWIXalTM5jkWO8bkuYE",
 									"type": "string"
 								}
 							]
@@ -202,10 +229,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/Temas",
+							"raw": "http://192.168.3.124:5000/api/Temas",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"192",
+								"168",
+								"3",
+								"124"
 							],
 							"port": "5000",
 							"path": [
@@ -229,7 +259,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imd1c3Rhdm9AZW1haWwuY29tIiwianRpIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjIiLCJyb2xlIjoiMiIsIm5hbWUiOiJndXN0YXZvIiwiZXhwIjoxNjM3OTU1ODExLCJpc3MiOiJyb21hbi53ZWJBUEkiLCJhdWQiOiJyb21hbi53ZWJBUEkifQ.ppKofz25iy28aFCYI3K80-wl3vngVf8nUlf_-uIWcLM",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imd1c3Rhdm9AZW1haWwuY29tIiwianRpIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjIiLCJyb2xlIjoiMiIsIm5hbWUiOiJndXN0YXZvIiwiZXhwIjoxNjM4MjA4MzczLCJpc3MiOiJyb21hbi53ZWJBUEkiLCJhdWQiOiJyb21hbi53ZWJBUEkifQ.ogQ_uZ5lRRVfUstroxHNSaRtjWIXalTM5jkWO8bkuYE",
 									"type": "string"
 								}
 							]
@@ -237,10 +267,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/TiposUsuarios",
+							"raw": "http://192.168.3.124:5000/api/TiposUsuarios",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"192",
+								"168",
+								"3",
+								"124"
 							],
 							"port": "5000",
 							"path": [
@@ -264,7 +297,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imd1c3Rhdm9AZW1haWwuY29tIiwianRpIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjIiLCJyb2xlIjoiMiIsIm5hbWUiOiJndXN0YXZvIiwiZXhwIjoxNjM3OTU1ODExLCJpc3MiOiJyb21hbi53ZWJBUEkiLCJhdWQiOiJyb21hbi53ZWJBUEkifQ.ppKofz25iy28aFCYI3K80-wl3vngVf8nUlf_-uIWcLM",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imd1c3Rhdm9AZW1haWwuY29tIiwianRpIjoiMiIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6IjIiLCJyb2xlIjoiMiIsIm5hbWUiOiJndXN0YXZvIiwiZXhwIjoxNjM4MjA4MzczLCJpc3MiOiJyb21hbi53ZWJBUEkiLCJhdWQiOiJyb21hbi53ZWJBUEkifQ.ogQ_uZ5lRRVfUstroxHNSaRtjWIXalTM5jkWO8bkuYE",
 									"type": "string"
 								}
 							]
@@ -272,10 +305,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:5000/api/Usuarios",
+							"raw": "http://192.168.3.124:5000/api/Usuarios",
 							"protocol": "http",
 							"host": [
-								"localhost"
+								"192",
+								"168",
+								"3",
+								"124"
 							],
 							"port": "5000",
 							"path": [
