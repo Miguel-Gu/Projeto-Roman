@@ -11,14 +11,14 @@ import {
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-import api from '../services/api';
+import api from '../screens/services/api'
 
 export default class Login extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            email: '',
-            senha: '',
+            email: 'adm@email.com',
+            senha: 'adm12345',
         };
     }
 
@@ -34,7 +34,7 @@ export default class Login extends Component {
         await AsyncStorage.setItem('userToken', token);
 
         if (resposta.status == 200) {
-            this.props.navigation.navigate('Main');
+            this.props.navigation.navigate('projetos');
         }
 
         console.warn(token);
@@ -42,7 +42,10 @@ export default class Login extends Component {
     };
     render() {
         return (
-            <ImageBackground source={require('../../assets/img/TelaLogin.png')}>
+            //<ImageBackground source={require('../../assets/img/TelaLogin.png')}>
+            <ImageBackground source={require('../../assets/img/Tela Login.png')}>
+
+
                 <View style={styles.overlay} />
                 <View style={styles.main}>
                     <Image

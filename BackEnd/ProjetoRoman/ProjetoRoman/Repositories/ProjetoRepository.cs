@@ -44,6 +44,12 @@ namespace ProjetoRoman.Repositories
                             IdUsuario = p.IdProfessorNavigation.IdUsuarioNavigation.IdUsuario,
                             UserName = p.IdProfessorNavigation.IdUsuarioNavigation.UserName
                         }
+                    },
+                    IdTemaNavigation = new Tema()
+                    {
+                        IdTema = p.IdTemaNavigation.IdTema,
+                        NomeTema = p.IdTemaNavigation.NomeTema
+
                     }
                 })
                 .ToList();
