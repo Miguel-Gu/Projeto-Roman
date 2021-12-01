@@ -16,10 +16,29 @@ export default class Projetos extends Component {
   }
 
   buscarEventos = async () => {
-    const resposta = await api.get('/projetos');
-    // console.warn(resposta);
-    const dadosDaApi = resposta.data;
-    this.setState({listaProjetos: dadosDaApi});
+
+    try {
+      const token = await AsyncStorage.getItem('userToken');
+
+      if (token != null) {
+
+        const resposta = await api.get('/projetos',
+        {
+          headers: {
+            Authorization: 'Bearer ' + token,
+          },
+        });
+
+        if (resposta.status == 200) {
+          console.warn(resposta);
+          const dadosDaApi = resposta.data;
+          this.setState({listaProjetos: dadosDaApi})
+          
+        }
+      }
+    } catch (error) {
+      console.warn(error);
+    }
   };
 
   componentDidMount() {
@@ -28,11 +47,11 @@ export default class Projetos extends Component {
 
   render() {
     return (
-      <View style={styles.main}>
-        <Text style={styles.tituloListar}>Listar Meus Projetos</Text>
-        <View style={styles.linha}></View>
+      <View>
+        <Text>Listar Meus Projetos</Text>
+        <View></View>
 
-        <View style={styles.lista}>
+        <View>
           <FlatList data={this.state.listaProjetos} renderItem={this.renderItem}/>
         </View>
       </View>
@@ -41,7 +60,7 @@ export default class Projetos extends Component {
 
   renderItem = ({item}) => (
 
-    <View style={styles.projeto}>
+    <View>
       <Text>{item.nomeProjeto}</Text>
       <Text>{item.idTemaNavigation.nomeTema}</Text>
       <Text>{item.idProfessorNavigation.idEquipeNavigation.nomeEquipe}</Text>
@@ -49,16 +68,4 @@ export default class Projetos extends Component {
     </View>
   )
 }
-
-const styles = StyleSheet.create({
-  main: {
-    flex: 1,
-    backgroundColor: '#f1f1f1',
-  },
-  projeto: {
-    backgroundColor: '#f1f1f1',
-    color: 'C4c4c4'
-  },
-
-})
 
