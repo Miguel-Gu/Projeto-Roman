@@ -43,9 +43,7 @@ export default class Login extends Component {
     render() {
         return (
             //<ImageBackground source={require('../../assets/img/TelaLogin.png')}>
-            <ImageBackground source={require('../../assets/img/Tela Login.png')}>
-
-
+            <ImageBackground source={require('../../assets/img/Tela Login.png')}style={StyleSheet.absoluteFillObject}>
                 <View style={styles.overlay} />
                 <View style={styles.main}>
                     <Image
@@ -85,7 +83,7 @@ const styles = StyleSheet.create({
 
     overlay: {
         ...StyleSheet.absoluteFillObject,
-        backgroundColor: 'rgba(183,39,255,0.79)',
+        backgroundColor: 'rgba(44,52,79,0.87)',
     },
     main: {
         justifyContent: 'center',
@@ -109,7 +107,7 @@ const styles = StyleSheet.create({
       btnLoginText: {
         fontSize: 12,
         fontFamily: '', 
-        color: '#FFF', 
+        color: '#2C344F', 
 
         textTransform: 'uppercase', 
       },
