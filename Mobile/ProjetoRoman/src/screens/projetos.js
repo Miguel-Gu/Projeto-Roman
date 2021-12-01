@@ -68,4 +68,3 @@ export default class Projetos extends Component {
     </View>
   )
 }
-
