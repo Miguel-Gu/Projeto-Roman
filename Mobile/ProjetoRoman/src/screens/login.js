@@ -34,7 +34,7 @@ export default class Login extends Component {
         await AsyncStorage.setItem('userToken', token);
 
         if (resposta.status == 200) {
-            this.props.navigation.navigate('cadastrar');
+            this.props.navigation.navigate('projetos');
         }
 
         console.warn(token);
@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
 
     overlay: {
         ...StyleSheet.absoluteFillObject,
-        backgroundColor: 'rgba(44,52,79,0.87)',
+        backgroundColor: 'rgba(44,52,79,0.8)',
     },
     main: {
         justifyContent: 'center',
