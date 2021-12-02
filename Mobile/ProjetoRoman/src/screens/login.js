@@ -34,7 +34,7 @@ export default class Login extends Component {
         await AsyncStorage.setItem('userToken', token);
 
         if (resposta.status == 200) {
-            this.props.navigation.navigate('projetos');
+            this.props.navigation.navigate('cadastrar');
         }
 
         console.warn(token);
