@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
-import {FlatList, Image, StyleSheet, Text, View, TextInput} from 'react-native';
-import Picker from '@react-native-picker/picker'
+import React, { Component, useState } from 'react';
+import { FlatList, Image, StyleSheet, Text, View, TextInput } from 'react-native';
+import { Picker } from '@react-native-picker/picker';
 import api from './services/api';
 
-import {TouchableOpacity} from 'react-native-gesture-handler';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
@@ -14,61 +14,6 @@ export default class Cadastrar extends Component {
             IdTema: 0,
             IdProfessor: 0,
             NomeProjeto: '',
-            listaTemas: [],
-            listaProfessores: [],
-        }
-    }
-
-    buscarTemas = async () => {
-
-        try {
-            
-            const token = await AsyncStorage.getItem('userToken');
-
-            if (token != null) {
-                
-                const resposta = await api.get('/temas',
-                {
-                    headers: {
-                      Authorization: 'Bearer ' + token,
-                    },
-                  });
-
-                if (resposta.status == 200) {
-                    console.warn(resposta);
-                    const dadosDaApi = resposta.data;
-                    this.setState({listaTemas: dadosDaApi})
-                }
-            }
-        } catch (error) {
-            console.warn(erro);
-        }
-    }
-
-
-    buscarProfessores = async () => {
-
-        try {
-            
-            const token = await AsyncStorage.getItem('userToken');
-
-            if (token != null) {
-                
-                const resposta = await api.get('/professores',
-                {
-                    headers: {
-                      Authorization: 'Bearer ' + token,
-                    },
-                  });
-
-                if (resposta.status == 200) {
-                    console.warn(resposta);
-                    const dadosDaApi = resposta.data;
-                    this.setState({listaProfessores: dadosDaApi})
-                }
-            }
-        } catch (error) {
-            console.warn(erro);
         }
     }
 
@@ -79,16 +24,16 @@ export default class Cadastrar extends Component {
             const token = await AsyncStorage.getItem('userToken');
 
             const resposta = await api.post(
-                '/projetos', 
+                '/projetos',
                 {
-                    IdTema: this.state.idtema,
+                    IdTema: this.state.IdTema,
                     IdProfessor: this.state.IdProfessor,
                     NomeProjeto: this.state.NomeProjeto,
                 },
                 {
                     headers: {
                         Authorization: 'Bearer ' + token,
-                        },
+                    },
                 },
             )
 
@@ -104,41 +49,42 @@ export default class Cadastrar extends Component {
         }
     }
 
-    componentDidMount(){
-        this.buscarTemas();
-        this.buscarProfessores();
-    }
 
     render() {
-
         return (
             <View>
                 <Text>Novo Projeto</Text>
                 <View></View>
 
                 <View>
-                    <TextInput 
+                    <TextInput
                         placeholder="Nome do projeto"
-                        onChangeText={NomeProjeto => this.setState({NomeProjeto})}
+                        onChangeText={NomeProjeto => this.setState({ NomeProjeto })}
                     />
 
                     <Picker
-                        style={{ height: 50, width: 150 }}
-                        onValueChange={IdTema => this.setState({IdTema})}
+                        selectedValue={this.state.IdTema}
+                        onValueChange={tema => this.setState({ IdTema: tema })}
 
-
-                        selectedValue={selectedValue}
-                        style={{ height: 50, width: 150 }}
-                        onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}
                     >
-                        {
-                            this.state.listaTemas.map((tema) => {
-                                return (
-                                    <Picker.Item label={tema.nomeTema} value={tema.Idtema}/>
-                                )
-                            })
-                        }
+                        <Picker.Item label="Selecione um Tema" value={null} />
+                        <Picker.Item key='1' label='Gestão' value={1} />
+                        <Picker.Item key='2' label='HQs' value={2} />
+
                     </Picker>
+
+                    <Picker
+                        selectedValue={this.state.IdProfessor}
+                        onValueChange={professor => this.setState({ IdProfessor: professor })}
+
+                    >
+                        <Picker.Item label="Selecione um Professor" value={null} />
+                        <Picker.Item key='1' label='Gustavo' value={1} />
+                        <Picker.Item key='2' label='Matheus' value={2} />
+                        <Picker.Item key='3' label='Jhon' value={3} />
+
+                    </Picker>
+
 
                     <TouchableOpacity
                         onPress={this.cadastrarProjeto}
