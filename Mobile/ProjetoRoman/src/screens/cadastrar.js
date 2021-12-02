@@ -14,64 +14,8 @@ export default class Cadastrar extends Component {
             IdTema: 0,
             IdProfessor: 0,
             NomeProjeto: '',
-            listaTemas: [],
-            listaProfessores: [],
         }
     }
-
-    buscarTemas = async () => {
-
-        try {
-            
-            const token = await AsyncStorage.getItem('userToken');
-
-            if (token != null) {
-                
-                const resposta = await api.get('/temas',
-                {
-                    headers: {
-                      Authorization: 'Bearer ' + token,
-                    },
-                  });
-
-                if (resposta.status == 200) {
-                    console.warn(resposta);
-                    const dadosDaApi = resposta.data;
-                    this.setState({listaTemas: dadosDaApi})
-                }
-            }
-        } catch (error) {
-            console.warn(erro);
-        }
-    }
-
-
-    buscarProfessores = async () => {
-
-        try {
-            
-            const token = await AsyncStorage.getItem('userToken');
-
-            if (token != null) {
-                
-                const resposta = await api.get('/professores',
-                {
-                    headers: {
-                      Authorization: 'Bearer ' + token,
-                    },
-                  });
-
-                if (resposta.status == 200) {
-                    console.warn(resposta);
-                    const dadosDaApi = resposta.data;
-                    this.setState({listaProfessores: dadosDaApi})
-                }
-            }
-        } catch (error) {
-            console.warn(erro);
-        }
-    }
-
 
     cadastrarProjeto = async () => {
 
@@ -104,11 +48,6 @@ export default class Cadastrar extends Component {
         }
     }
 
-    componentDidMount(){
-        this.buscarTemas();
-        this.buscarProfessores();
-    }
-
     render() {
 
         return (
@@ -126,18 +65,25 @@ export default class Cadastrar extends Component {
                         style={{ height: 50, width: 150 }}
                         onValueChange={IdTema => this.setState({IdTema})}
 
-
                         selectedValue={selectedValue}
-                        style={{ height: 50, width: 150 }}
-                        onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}
                     >
-                        {
-                            this.state.listaTemas.map((tema) => {
-                                return (
-                                    <Picker.Item label={tema.nomeTema} value={tema.Idtema}/>
-                                )
-                            })
-                        }
+
+                        <Picker.Item label="Gestão" value="1"/>
+                        <Picker.Item label="HQs" value="2"/>
+
+                    </Picker>
+
+                    <Picker
+                        style={{ height: 50, width: 150 }}
+                        onValueChange={IdProfessor => this.setState({IdProfessor})}   
+                        
+                        selectedValue={selectedValue}
+                    >
+
+                        <Picker.Item label="Selecione um professor" value=""/>
+                        <Picker.Item label="Gustavo" value="1"/>
+                        <Picker.Item label="Matheus" value="2"/>
+                        <Picker.Item label="Jhon" value="3"/>
                     </Picker>
 
                     <TouchableOpacity
