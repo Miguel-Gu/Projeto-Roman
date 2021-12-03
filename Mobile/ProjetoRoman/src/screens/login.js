@@ -43,7 +43,7 @@ export default class Login extends Component {
     render() {
         return (
             //<ImageBackground source={require('../../assets/img/TelaLogin.png')}>
-            <ImageBackground source={require('../../assets/img/Tela Login.png')}style={StyleSheet.absoluteFillObject}>
+            <ImageBackground source={require('../../assets/img/Tela Login.png')} style={StyleSheet.absoluteFillObject}>
                 <View style={styles.overlay} />
                 <View style={styles.main}>
                     <Image
@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
     ImgLogoLogin: {
         width: 89,
         height: 90,
-        marginBottom: 40,
+        marginBottom:  100,
     },
     inputLogin: {
         width: 240, 
@@ -119,6 +119,7 @@ const styles = StyleSheet.create({
         width: 199,
         backgroundColor: '#FFFFFF',
         borderColor: '#FFFFFF',
-        borderWidth: 1,    
+        borderWidth: 1,   
+        marginTop: 40, 
       },
 });

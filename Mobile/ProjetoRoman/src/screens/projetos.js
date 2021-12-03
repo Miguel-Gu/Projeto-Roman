@@ -133,6 +133,7 @@ export default class Projetos extends Component {
 
 const styles = StyleSheet.create({
     // conteÃºdo da main
+
     main: {
         flex: 1,
         backgroundColor: '#ECECEC',

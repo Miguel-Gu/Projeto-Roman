@@ -1,5 +1,5 @@
 import React, { Component, useState } from 'react';
-import { FlatList, Image, StyleSheet, Text, View, TextInput } from 'react-native';
+import { FlatList, Image, StyleSheet, Text, View, TextInput, ImageBackground } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 import api from './services/api';
 
@@ -56,6 +56,7 @@ export default class Cadastrar extends Component {
                 <ImageBackground source={require('../../assets/img/FundoCadastro.png')} />
                 <View style={styles.cabcalho}>
                     <Text style={styles.cabecalhoText}>Novo Projeto</Text>
+                    <View style={styles.linhaCabecalho}></View>
                 </View>
 
                 <View style={styles.boxInputs}>
@@ -107,14 +108,22 @@ const styles = StyleSheet.create({
 
     main: {
         flex: 1,
-        backgroundColor: '#ECECEC',
         justifyContent: 'center',
+        paddingTop: 50,
     },
     
     cabecalhoText: {
-      fontSize: 18,
-      color: '#000'
+      fontSize: 20,
+      color: '#000',
+      marginLeft: 61,
+      marginBottom: 10,
   
+    },
+    linhaCabecalho: {
+        width: 288,
+        height: 1,
+        marginLeft: 61,
+        backgroundColor: '#000'
     },
   
     boxInputs: {
@@ -126,7 +135,7 @@ const styles = StyleSheet.create({
     InputsCadastro: {
       fontSize: 16,
       width: 288,
-      height: 40,
+      height: 60,
       backgroundColor: '#FFF',
       borderRadius: 10,
       paddingLeft: 20,
@@ -134,12 +143,20 @@ const styles = StyleSheet.create({
   
   
     btnCadastro: {
-      width: 220,
+      width: 288,
       height: 50,
       backgroundColor: '#5C79DA',
+      borderRadius: 10,
+      
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
     },
   
     cadastroBtnText: {
-    }
+        fontSize: 22,
+        color: '#fff'
+
+    },
   
   });
