@@ -94,6 +94,7 @@ const styles = StyleSheet.create({
     ImgLogoLogin: {
         width: 89,
         height: 90,
+        marginBottom: 40,
     },
     inputLogin: {
         width: 240, 

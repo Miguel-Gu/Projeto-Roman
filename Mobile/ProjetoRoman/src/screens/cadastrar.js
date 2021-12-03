@@ -52,17 +52,22 @@ export default class Cadastrar extends Component {
 
     render() {
         return (
-            <View>
-                <Text>Novo Projeto</Text>
-                <View></View>
+            <View style={styles.main}>
+                <ImageBackground source={require('../../assets/img/FundoCadastro.png')} />
+                <View style={styles.cabcalho}>
+                    <Text style={styles.cabecalhoText}>Novo Projeto</Text>
+                </View>
 
-                <View>
+                <View style={styles.boxInputs}>
                     <TextInput
+                        style={styles.InputsCadastro}
                         placeholder="Nome do projeto"
+                        placeholderTextColor="#9E9E9E"
                         onChangeText={NomeProjeto => this.setState({ NomeProjeto })}
                     />
 
                     <Picker
+                        style={styles.InputsCadastro}
                         selectedValue={this.state.IdTema}
                         onValueChange={tema => this.setState({ IdTema: tema })}
 
@@ -74,6 +79,7 @@ export default class Cadastrar extends Component {
                     </Picker>
 
                     <Picker
+                        style={styles.InputsCadastro}
                         selectedValue={this.state.IdProfessor}
                         onValueChange={professor => this.setState({ IdProfessor: professor })}
 
@@ -87,12 +93,53 @@ export default class Cadastrar extends Component {
 
 
                     <TouchableOpacity
+                        style={styles.btnCadastro}
                         onPress={this.cadastrarProjeto}
                     >
-                        <Text>Cadastrar</Text>
+                        <Text style={styles.cadastroBtnText}>Cadastrar</Text>
                     </TouchableOpacity>
                 </View>
             </View>
         )
     }
 }
+const styles = StyleSheet.create({
+
+    main: {
+        flex: 1,
+        backgroundColor: '#ECECEC',
+        justifyContent: 'center',
+    },
+    
+    cabecalhoText: {
+      fontSize: 18,
+      color: '#000'
+  
+    },
+  
+    boxInputs: {
+      alignItems: 'center',
+      justifyContent: 'space-around',
+      flex: 1
+    },
+  
+    InputsCadastro: {
+      fontSize: 16,
+      width: 288,
+      height: 40,
+      backgroundColor: '#FFF',
+      borderRadius: 10,
+      paddingLeft: 20,
+    },
+  
+  
+    btnCadastro: {
+      width: 220,
+      height: 50,
+      backgroundColor: '#5C79DA',
+    },
+  
+    cadastroBtnText: {
+    }
+  
+  });
